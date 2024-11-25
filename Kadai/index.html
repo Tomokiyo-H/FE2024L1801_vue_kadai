@@ -32,17 +32,17 @@
         <!-- 名前の表示 -->
           <p>{{ name }}さんの運勢は…</p>
           <!-- 運勢が大吉だった場合、大吉画像表示 -->
-          <img v-if="fortune === 'daikichi'" script src="./img/daikichi.png">
+          <img v-if="fortune === 'daikichi'" script src="./img/daikichi.png" alt="daikichi">
           <!-- 運勢が吉だった場合、吉画像表示 -->
-          <img v-else-if="isValidName = 'kichi'" script src="./img/kichi.png">
+          <img v-else-if="fortune === 'kichi'" script src="./img/kichi.png" alt="kichi">
           <!-- 運勢が中吉だった場合、中吉画像表示 -->
-          <img v-else-if="isValidName = 'chukichi'" script src="./img/chukichi.png">
+          <img v-else-if="fortune === 'chukichi'" script src="./img/chukichi.png" alt="chukichi">
           <!-- 運勢が小吉だった場合、小吉画像表示 -->
-          <img v-else-if="isValidName = 'shokichi'"script src="./img/shokichi.png">
+          <img v-else-if="fortune === 'shokichi'"script src="./img/shokichi.png" alt="shokichi">
           <!-- 運勢が凶だった場合、凶画像表示 -->
-          <img v-else="isValidName = 'kyo'" script src="./img/kyo.png">
+          <img v-else="fortune === 'kyo'" script src="./img/kyo.png" alt="kyo">
         </div>
-    </div>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./script/script.js"></script>
 </body>
