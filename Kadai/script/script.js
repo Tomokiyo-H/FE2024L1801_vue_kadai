@@ -23,13 +23,13 @@ new Vue({
       if (omikuzi) {
         //0から100までのランダムな数値を取得する
         const randomNumber = Math.round(Math.random() * 100);
-        if(rendomNumber >=80){//数値が80以上の場合（大吉）
+        if(randomNumber >=80){//数値が80以上の場合（大吉）
           this.fortune='daikiti';
-        }else if(rendomNumber >=60){//数値が60以上の場合（吉）
+        }else if(randomNumber >=60){//数値が60以上の場合（吉）
           this.fortune='kiti';
-        }else if(rendomNumber >=40){//数値が40以上の場合（中吉
+        }else if(randomNumber >=40){//数値が40以上の場合（中吉
           this.fortune="chukichi"
-        }else if(rendomNumber >=20){//数値が20以上の場合（小吉）
+        }else if(randomNumber >=20){//数値が20以上の場合（小吉）
           this.fortune="shokichi"
         }else{//それ以外の場合（凶）
           this.fortune="kyo"
