@@ -31,12 +31,18 @@ new Vue({
         if(rendomNumber >=60){
           this.fortune='kiti';
         }
-        //数値が40以上の場合（中吉）
-
+        //数値が40以上の場合（中吉
+        if(rendomNumber >=40){
+          this.fortune="chukichi"
+        }
         //数値が20以上の場合（小吉）
-
+        if(rendomNumber >=20){
+          this.fortune="shokichi"
+        }
         //それ以外の場合（凶）
-
+        if(rendomNumber >=0){
+          this.fortune="kyo"
+        }
       }
     }
   }

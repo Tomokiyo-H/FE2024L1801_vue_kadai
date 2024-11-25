@@ -17,11 +17,11 @@
 <body> 
     <div id="app">
         <label for="name">名前を入力してください：</label>
-          <input type="text" v-model="name" @input="validateName">
           <!-- 名前入力 -->
+          <input type="text" v-model="name" @input="validateName">
         </label>
         <!-- おみくじを引くボタン、名前入力が5文字以下の場合は押せないようにする -->
-          <button v-if="">おみくじを引く</button>
+          <button @click="drawFortune" :daisabled="!isValidName">おみくじを引く</button>
         <!-- エラーメッセージ -->
         <p v-if="!isValidName" style="color: red;">{{ errorMessage }}</p>
         <!-- p v-if="errorMessage" style="color: red;">{{ errorMessage }}</p-->
