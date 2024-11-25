@@ -17,29 +17,30 @@
 <body> 
     <div id="app">
         <label for="name">名前を入力してください：</label>
-        <!-- 名前入力 -->
-        
+          <input type="text" v-model="name" @input="validateName">
+          <!-- 名前入力 -->
+        </label>
         <!-- おみくじを引くボタン、名前入力が5文字以下の場合は押せないようにする -->
-    
+          <button v-if="">おみくじを引く</button>
         <!-- エラーメッセージ -->
         <p v-if="!isValidName" style="color: red;">{{ errorMessage }}</p>
         <!-- p v-if="errorMessage" style="color: red;">{{ errorMessage }}</p-->
-    
+        
         <!-- 名前の表示と運勢の画像 -->
         <!-- 5文字以上の名前入力かつ、運勢確定した場合 -->
-
+        <div v-i="fortune && isValidName" class="fortune-bg"></div>
         <!-- 名前の表示 -->
           <p>{{ name }}さんの運勢は…</p>
           <!-- 運勢が大吉だった場合、大吉画像表示 -->
-
+          <script src="./img/daikichi.png"></script>
           <!-- 運勢が吉だった場合、吉画像表示 -->
-
+          <script src="./img/kichi.png"></script>
           <!-- 運勢が中吉だった場合、中吉画像表示 -->
-
+          <script src="./img/chukichi.png"></script>
           <!-- 運勢が小吉だった場合、小吉画像表示 -->
-
+          <script src="./img/shokichi.png"></script>
           <!-- 運勢が凶だった場合、凶画像表示 -->
-
+          <script src="./img/kyo.png"></script>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
