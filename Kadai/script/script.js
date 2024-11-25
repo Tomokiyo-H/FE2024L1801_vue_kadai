@@ -20,7 +20,7 @@ new Vue({
     },
     drawFortune() {
       // バリデーションが成功した場合のみランダムな運勢を生成
-      if (omikuzi) {
+      if (this.isValidName) {
         //0から100までのランダムな数値を取得する
         const randomNumber = Math.round(Math.random() * 100);
         if(randomNumber >=80){//数値が80以上の場合（大吉）
@@ -28,11 +28,11 @@ new Vue({
         }else if(randomNumber >=60){//数値が60以上の場合（吉）
           this.fortune='kiti';
         }else if(randomNumber >=40){//数値が40以上の場合（中吉
-          this.fortune="chukichi"
+          this.fortune='chukichi'
         }else if(randomNumber >=20){//数値が20以上の場合（小吉）
-          this.fortune="shokichi"
+          this.fortune='shokichi'
         }else{//それ以外の場合（凶）
-          this.fortune="kyo"
+          this.fortune='kyo'
         }
       }
     }
